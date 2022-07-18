@@ -9,10 +9,17 @@ public class TypeTest
     public void Test1()
     {
         var x = GetInt();
-        Assert.Equal(3, x);
+        SetInt( ref x);
+
+
+        Assert.Equal( 42, x);
 
     }
-    public int GetInt()
+    public void SetInt(ref int x)
+    {
+        x = 42;
+    }
+    private int GetInt()
     {
         return 3;
     }
