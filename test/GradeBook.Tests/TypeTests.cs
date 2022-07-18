@@ -53,6 +53,20 @@ public class TypeTest
     }
 
     [Fact]
+    public void StringsBehaveLikeValueTypes()
+    {
+        string name = "Job";
+        var upper = MakeUpperCase(name);
+
+        Assert.Equal("Job", name);
+        Assert.Equal("JOB", upper);
+    }
+    private string MakeUpperCase(string param)
+    {
+        return param.ToUpper();
+    }
+
+    [Fact]
     public void CanSetNameFromReference()
     {
         var book1 = GetBook("Book 1");
