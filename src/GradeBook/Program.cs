@@ -21,7 +21,7 @@ namespace GradeBook{
                 Console.WriteLine("Enter a Grade or press 'q' to quit:");
                 var input = Console.ReadLine();
 
-                if (input == "q"){
+                if (input == "q"){  /** we use double quotes to make "q" be read as a letter by the compiler **/
                     break;
                 }
 

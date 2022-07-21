@@ -10,7 +10,7 @@ namespace GradeBook{
 
 // else if statement 
         // public void AddLetterGrade(char letter){
-        //     if (letter == 'A'){
+        //     if (letter == 'A'){   NOTE: we are using single quotes since letter is of CHAR type. 
         //         AddGrade(90);
         //     }
         //     else if (letter == 'B'){
@@ -54,7 +54,7 @@ namespace GradeBook{
             }
             else
             {
-                Console.WriteLine("Invalid Value");
+                throw new ArgumentException($"Invalid {nameof (grade)}");
             }
         }
 
