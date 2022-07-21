@@ -12,14 +12,31 @@ namespace GradeBook{
         static void Main (string [] args){
 
             var book = new Book("Jobs Grade Book :) ");
-            book.AddGrade(10.0);
-            book.AddGrade(11.0);
-            book.AddGrade(12.0);
+            // book.AddGrade(90.0);
+            // book.AddGrade(81.0);
+            // book.AddGrade(79.0);
+
+            while (true){
+                
+                Console.WriteLine("Enter a Grade or press 'q' to quit:");
+                var input = Console.ReadLine();
+
+                if (input == "q"){
+                    break;
+                }
+
+                var grade = double.Parse(input); 
+                book.AddGrade(grade);
+            }
+
+            
+            
 
             var stats = book.GetStatistics();
             Console.WriteLine($"The lowest grade is {stats.Low}");
             Console.WriteLine($"The highest grade is {stats.High}");
             Console.WriteLine($"The average grade is {stats.Average:N2}");
+            Console.WriteLine($"The letter grade is {stats.letter}");
 
 
 // sum 

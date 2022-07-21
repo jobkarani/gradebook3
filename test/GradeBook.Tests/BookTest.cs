@@ -20,17 +20,18 @@ public class BookTest
 
                                                         // // arrange
                                                         // var book = new Book("");
-                                                        // book.AddGrade(10.0);
-                                                        // book.AddGrade(11.0);
-                                                        // book.AddGrade(12.0);
+                                                        // book.AddGrade(90.0);
+                                                        // book.AddGrade(81.0);
+                                                        // book.AddGrade(79.0);
 
                                                         // // act
                                                         // var result = book.GetStatistics();
 
                                                         // // assert
-                                                        // Assert.Equal(11.0, result.Average, 1);
-                                                        // Assert.Equal(12.0, result.High, 1);
-                                                        // Assert.Equal(10.0, result.Low, 1);
+                                                        // Assert.Equal(90.0, result.Average, 1);
+                                                        // Assert.Equal(81.0, result.High, 1);
+                                                        // Assert.Equal(79.0, result.Low, 1);
+                                                        // Assert.Equal('B', result.letter);
 
     }
 }   
