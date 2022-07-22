@@ -17,11 +17,25 @@ namespace GradeBook{
         }
     }
 
-    public abstract class Book : NamedObject{
+    public interface IBook{
+        void AddGrade(double grade);
+        Statistics GetStatistics();
+        string Name {get;}
+        event GradeAddedDelegate GradeAdded; 
+    }
+
+    public abstract class Book : NamedObject, IBook
+    {
         public Book(string name) : base(name){
 
         }
+
+        public virtual event GradeAddedDelegate GradeAdded;
         public abstract void AddGrade(double grade);
+
+        public virtual Statistics GetStatistics(){
+            throw new NotImplementedException();
+        }
 
     }
     public class InMemoryBook : Book
@@ -87,9 +101,9 @@ namespace GradeBook{
                 throw new ArgumentException($"Invalid {nameof (grade)}");
             }
         }
-    public event GradeAddedDelegate GradeAdded;
+    public override event GradeAddedDelegate GradeAdded;
 
-        public Statistics GetStatistics(){
+        public override Statistics GetStatistics(){
 
             var result = new Statistics();
             result.Average = 0.0;
