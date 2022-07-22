@@ -58,9 +58,9 @@ public class TypeTest
         Assert.Equal("New Name", book1.Name);
     }
 
-    private void GetBookSetName(ref Book Book, string name)
+    private void GetBookSetName(ref InMemoryBook Book, string name)
     {
-        Book = new Book(name);
+        Book = new InMemoryBook(name);
     }
     
     [Fact]
@@ -72,9 +72,9 @@ public class TypeTest
         Assert.Equal("Book 1", book1.Name);
     }
 
-    private void GetBookSetName(Book Book, string name)
+    private void GetBookSetName(InMemoryBook Book, string name)
     {
-        Book = new Book(name);
+        Book = new InMemoryBook(name);
     }
 
     [Fact]
@@ -100,7 +100,7 @@ public class TypeTest
         Assert.Equal("New Name", book1.Name);
     }
 
-    private void SetName(Book Book, string name)
+    private void SetName(InMemoryBook Book, string name)
     {
         Book.Name = name;
     }
@@ -126,8 +126,8 @@ public class TypeTest
         Assert.True(Object.ReferenceEquals(book1,book2));
     }
 
-    Book GetBook(string name)
+    InMemoryBook GetBook(string name)
     {
-        return new Book(name);
+        return new InMemoryBook(name);
     }
 }   

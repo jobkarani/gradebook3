@@ -16,9 +16,17 @@ namespace GradeBook{
             set;
         }
     }
-    public class Book : NamedObject
+
+    public abstract class Book : NamedObject{
+        public Book(string name) : base(name){
+
+        }
+        public abstract void AddGrade(double grade);
+
+    }
+    public class InMemoryBook : Book
     {
-        public Book(string name) : base(name)
+        public InMemoryBook(string name) : base(name)
         {
 
             const int X = 3;
@@ -66,7 +74,7 @@ namespace GradeBook{
         //             break;
         //     }
         // }
-        public void AddGrade(double grade){
+        public override void AddGrade(double grade){
             if (grade <= 100.0 && grade >=0.0 )
             {
                 grades.Add(grade);
