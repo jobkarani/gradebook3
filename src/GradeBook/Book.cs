@@ -155,7 +155,7 @@ namespace GradeBook{
 
     public string Name{
         get;
-        private set;
+        set;
     }
         // private string name;
 
