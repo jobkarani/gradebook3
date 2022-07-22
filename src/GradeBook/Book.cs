@@ -4,6 +4,9 @@ namespace GradeBook{
     public class Book{
 
         public Book(string name){
+
+            const int X = 3;
+            // category = ""; /** readonly field **/
             grades = new List<double>();
             Name = name;
         }
@@ -154,7 +157,14 @@ namespace GradeBook{
         get;
         private set;
     }
-        private string name;
+        // private string name;
+
+        // readonly string category = "Science";
+
+        // const string category = "Science"; /**local scope**/
+
+        public const string CATEGORY = "Science"; /** global scope**/
+
     }
 }
 

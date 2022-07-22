@@ -45,6 +45,7 @@ namespace GradeBook{
 
             // book.Name = "";    /**get and set properties for book name **/
 
+            Console.WriteLine(Book.CATEGORY); /** since CATEGORY is a static member of the book class **/
             Console.WriteLine($"The book named {book.Name}");
             Console.WriteLine($"The lowest grade is {stats.Low}");
             Console.WriteLine($"The highest grade is {stats.High}");
