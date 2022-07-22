@@ -2,8 +2,16 @@ using System.Collections.Generic;
 
 namespace GradeBook{
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
-    public class Book{
 
+// base class
+    public class NamedObject{
+        public string Name{
+            get;
+            set;
+        }
+    }
+    public class Book : NamedObject
+    {
         public Book(string name){
 
             const int X = 3;
@@ -157,11 +165,12 @@ namespace GradeBook{
         // }
 
 // modern ms way
+        // public string Name{
+        //     get;
+        //     set;
+        // }
 
-    public string Name{
-        get;
-        set;
-    }
+
         // private string name;
 
         // readonly string category = "Science";

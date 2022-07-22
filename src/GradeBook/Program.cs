@@ -16,10 +16,10 @@ namespace GradeBook{
             // book.AddGrade(81.0);
             // book.AddGrade(79.0);
 
-            book.GradeAdded += OnGradeAdded;
-            book.GradeAdded += OnGradeAdded;
-            book.GradeAdded -= OnGradeAdded;
-            book.GradeAdded += OnGradeAdded;
+            book.GradeAdded += OnGradeAdded; /**eventhandler for adding/subscribing a book **/
+            // book.GradeAdded += OnGradeAdded;
+            // book.GradeAdded -= OnGradeAdded;
+            // book.GradeAdded += OnGradeAdded;
 
             while (true){
                 
