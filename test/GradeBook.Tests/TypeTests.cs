@@ -70,15 +70,15 @@ public class TypeTest
     public void CanSetNameFromReference()
     {
         var book1 = GetBook("Book 1");
-        SetName(book1, "New Name");
+        // SetName(book1, "New Name");
 
         Assert.Equal("New Name", book1.Name);
     }
 
-    private void SetName(Book Book, string name)
-    {
-        Book.Name = name;
-    }
+    // private void SetName(Book Book, string name)
+    // {
+    //     Book.Name = name;
+    // }
 
     [Fact]
     public void GetBookReturnsDifferentObjects()

@@ -135,7 +135,26 @@ namespace GradeBook{
         }
 
         private List<double> grades;
-        public string Name;
+
+// old method for get and set properties
+        // public string Name{
+        //     get{
+        //         return name;
+        //     }
+        //     set{
+        //         if (!string.IsNullOrEmpty(value)){
+        //             name = value;
+        //         }
+        //     }
+        // }
+
+// modern ms way
+
+    public string Name{
+        get;
+        private set;
+    }
+        private string name;
     }
 }
 
