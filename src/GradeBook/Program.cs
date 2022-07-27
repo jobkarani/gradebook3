@@ -12,7 +12,7 @@ namespace GradeBook{
         static void Main (string [] args)
         {
 
-            var book = new InMemoryBook("Jobs Grade Book :) ");
+            IBook book= new DiskBook("Jobs Grade Book :) ");
             // book.AddGrade(90.0);
             // book.AddGrade(81.0);
             // book.AddGrade(79.0);
@@ -28,7 +28,7 @@ namespace GradeBook{
 
             // book.Name = "";    /**get and set properties for book name **/
 
-            Console.WriteLine(InMemoryBook.CATEGORY); /** since CATEGORY is a static member of the book class **/
+            // Console.WriteLine(InMemoryBook.CATEGORY); /** since CATEGORY is a static member of the book class **/
             Console.WriteLine($"The book named {book.Name}");
             Console.WriteLine($"The lowest grade is {stats.Low}");
             Console.WriteLine($"The highest grade is {stats.High}");
